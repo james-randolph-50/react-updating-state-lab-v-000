@@ -1,25 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-class DigitalClicker extends React,Component {
+class DigitalClicker extends React.Component {
   constructor() {
     super();
-    
+
     this.state = {
       timesClicked: 0,
     };
   }
-  
+
   handleClick = () => {
     this.setState(prevState => ({
       timesClicked: prevState.timesClicked+1
     }))
   }
-  
+
   render() {
-    return(
+    return (
       <button onClick={this.handleClick}>{this.state.timesClicked}</button>
-      );
+    );
   }
 }
 
-export default DigitalClicker
+export default DigitalClicker;
