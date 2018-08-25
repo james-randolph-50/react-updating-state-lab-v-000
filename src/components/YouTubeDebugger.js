@@ -5,7 +5,22 @@ class YouTubeDebugger extends React.Component {
     super();
     
     this.state = {
-      js
-    }
+      errors: [],
+      user: null,
+      settings: {
+        bitrate: 8,
+        video: {
+          resolution: '1080p'
+        }
+      }
+    };
+  }
+  
+  handleChangeBitrate = () => {
+    this,setState({
+      settings: Object.assign({}, this.state.settings, {
+        bitrate: 12
+      }),
+    });
   }
 }
