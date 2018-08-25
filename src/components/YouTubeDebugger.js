@@ -32,9 +32,22 @@ class YouTubeDebugger extends React.Component {
         })
       }),
     });
-    
-    
-      render() {
+
+    /*
+      Or this can be defined as
+      this.setState({
+        settings: {
+          ...this.state.settings,
+          video: {
+            ...this.state.settings.video,
+            resolution: '720p'
+          }
+        },
+      });
+    */
+  }
+
+  render() {
     return (
       <div>
         <button
